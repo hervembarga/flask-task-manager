@@ -11,7 +11,7 @@
                         <i class="fas fa-caret-down"></i>
                         {% if session.user|lower == task.created_by|lower %}
                             <!-- Modal Trigger -->    
-                            <a href="#mo@{{ task._id}}" class="btn-small green accent-4 modal-trigger">Done</a>
+                            <a href="#mo@{{ task._id}}" class="btn-small red lighten-1 modal-trigger">Done</a>
                             <!-- Modal Structure -->
                             <div id="mo@{{ task._id}}" class="modal">
                                 <div class="modal-content green-text center-align text-darken-4 modal-del-task">
@@ -25,7 +25,7 @@
                                     <a href="{{ url_for('delete_task', task_id=task._id) }}" class="btn-small green accent-4">Delete</a>
                                 </div>
                             </div>
-                            <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small light-blue lighten-2">Edit</a>
+                            <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn-small green lighten-1">Edit</a>
                         {% endif %}
                     </div>
                     <div class="col s9">
